@@ -1,8 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const corsOptions = require("./config/cors_options_config");
+const { logger } = require("./middleware/log_events_middleware");
 
 const app = express();
+
+// request loggger middlewares
+app.use(logger);
 
 // built in middlewares
 app.use(cors(corsOptions));
