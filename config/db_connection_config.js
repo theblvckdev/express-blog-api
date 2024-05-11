@@ -15,7 +15,7 @@ db.connect((err) => {
 
   //   creating admins tables if it does not exists
   db.query(`CREATE TABLE IF NOT EXISTS admins (
-        id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+        admin_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(255) NOT NULL,
         username VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
@@ -28,34 +28,31 @@ db.connect((err) => {
 
   // creating posts table if it does not exists
   db.query(`CREATE TABLE IF NOT EXISTS posts (
-      id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-      admin_id INT NOT NULL,
+      post_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+      admin_id INT,
       title VARCHAR(255) NOT NULL,
       content TEXT NOT NULL,
       image VARCHAR(255) NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      FORIEGN KEY (admin_id) REFERENCES admins(id);
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB`);
 
   // creating comments table if it does not exists
   db.query(`CREATE TABLE IF NOT EXISTS comments (
-      id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-      post_id INT NOT NULL,
+      comment_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+      post_id INT,
       message TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      FORIEGN KEY (post_id) REFERENCES posts(id);
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB`);
 
   // creating replies table if it does not exists
   db.query(`CREATE TABLE IF NOT EXISTS replies (
       id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-      comment_id INT NOT NULL,
+      comment_id INT,
       message TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      FORIEGN KEY (comment_id) REFERENCES comments(id);
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB`);
 });
 
