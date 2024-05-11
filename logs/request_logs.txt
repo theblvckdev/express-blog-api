@@ -1,1 +1,12 @@
 Date & Time: 10|05|2024	20:49:29	Request ID: 02acc6bb-848d-4c6c-b1ef-3ee949e4451a	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	21:39:02	Request ID: a8b84aff-0ce1-46ed-aa71-3e773d311a64	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	21:39:53	Request ID: e5d69361-0c79-49f8-b897-321122c7d893	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	21:40:30	Request ID: 15624b32-fa30-4519-bf48-375a3712681e	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	21:41:09	Request ID: 76529e71-6ecf-428c-b154-a80970069e13	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	21:41:20	Request ID: 04d32c43-17fa-4139-be44-762d3496dd39	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:06:42	Request ID: 2a58c989-f6aa-4889-b6f5-9d95041fc921	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:07:52	Request ID: 1654a6de-9df2-4d3e-af1c-2167c6653536	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:08:43	Request ID: 364856dc-620d-42d8-b64c-fc6f9ed4c6b9	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:10:00	Request ID: f96e8345-20c8-4f85-bb52-bfdbb1c43160	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:10:30	Request ID: 61d2e81c-6e04-41e6-977c-b4e4bbbc782b	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register
+Date & Time: 11|05|2024	22:12:18	Request ID: 77da4f29-aaba-428d-86d2-18e9719fe609	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register

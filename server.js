@@ -3,6 +3,7 @@ const cors = require("cors");
 const corsOptions = require("./config/cors_options_config");
 const { logger } = require("./middleware/log_events_middleware");
 const authRroute = require("./routes/auth/auth_routes");
+const errorHandler = require("./middleware/error_handler_middleware");
 
 const app = express();
 
@@ -18,5 +19,7 @@ const PORT = process.env.PORT || 3000;
 
 // api route endpoints
 app.use("/api/auth/", authRroute);
+
+app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server Runnung on Port:${PORT}`));
