@@ -19,9 +19,9 @@ db.connect((err) => {
         name VARCHAR(255) NOT NULL,
         username VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        email_verification_token VARCHAR(255) NOT NULL,
+        email_verification_token VARCHAR(255) NULL,
         password VARCHAR(255) NOT NULL,
-        password_reset_token VARCHAR(255) NOT NULL,
+        password_reset_token VARCHAR(255) NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB`);
