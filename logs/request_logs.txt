@@ -1,0 +1,1 @@
+Date & Time: 10|05|2024	20:49:29	Request ID: 02acc6bb-848d-4c6c-b1ef-3ee949e4451a	Method: POST	 Request Origin: undefined	Request URL Endpoint: /api/auth/register

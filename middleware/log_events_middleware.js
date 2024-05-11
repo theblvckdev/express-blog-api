@@ -7,9 +7,9 @@ const path = require("path");
 
 const logEvents = async (message, logName) => {
   const dateTime = `${format(new Date(), "dd|MM|yyyy\tHH:mm:ss")}`;
-  const logTime = `${dateTime}\tRequest ID${uuid()}\t${message}\n`;
+  const logItem = `Date & Time: ${dateTime}\tRequest ID: ${uuid()}\t${message}\n`;
 
-  console.log(logTime);
+  console.log(logItem);
 
   try {
     if (!fs.existsSync(path.join(__dirname, "..", "logs"))) {
@@ -27,7 +27,7 @@ const logEvents = async (message, logName) => {
 
 const logger = (req, res, next) => {
   logEvents(
-    `${req.method}\t${req.headers.origin}\t${req.url}`,
+    `Method: ${req.method}\t Request Origin: ${req.headers.origin}\tRequest URL Endpoint: ${req.url}`,
     "request_logs.txt"
   );
 
