@@ -17,7 +17,6 @@ db.connect((err) => {
   db.query(`CREATE TABLE IF NOT EXISTS admins (
         admin_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(255) NOT NULL,
-        username VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
         email_verification_token VARCHAR(255) NULL,
         password VARCHAR(255) NOT NULL,
