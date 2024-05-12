@@ -3,10 +3,10 @@ const bcrypt = require("bcrypt");
 const { randomBytes, createHash } = require("crypto");
 
 const registerAdmin = (req, res) => {
-  const { username, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   // make sure all fields are required
-  if (!username || !email || !password)
+  if (!name || !email || !password)
     return res
       .status(401)
       .json({ status: "unauthorized", message: "All fields are required" });
@@ -38,21 +38,24 @@ const registerAdmin = (req, res) => {
       .digest("hex");
 
     const sqlInsertQuery =
-      "INSERT INTO admins (username, name, email, password, email_verification_token) VALUES (?, ?, ?, ?, ?)";
+      "INSERT INTO admins (name, email, password, email_verification_token) VALUES (?, ?, ?, ?)";
 
     db.query(
       sqlInsertQuery,
-      [username, username, email, hashedPassword, hashedEmailVerificatonTOken],
+      [name, email, hashedPassword, hashedEmailVerificatonTOken],
       (err, result) => {
         if (err)
           return res
             .status(500)
             .json({ status: "Internal server error", message: err.message });
 
+        // send verification mail to client email address
+
         // console.log(hashedEmailVerificatonTOken);
         res.status(201).json({
           status: "created",
-          message: "Your account was created successfully!",
+          message:
+            "Account created successfully, please check your email for verification mail!",
         });
       }
     );
