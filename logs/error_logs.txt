@@ -1,0 +1,2 @@
+Date & Time: 12|05|2024	04:52:53	Request ID: fbdd57bb-7dd0-4493-bc22-7e6fdee98cae	ReferenceError: db is not defined
+Date & Time: 12|05|2024	04:53:04	Request ID: 1961c097-b29b-4b6e-b726-2a25aaf5079e	TypeError: db.sqlQuery is not a function

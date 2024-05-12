@@ -20,6 +20,13 @@ const PORT = process.env.PORT || 3000;
 // api route endpoints
 app.use("/api/auth/", authRroute);
 
+app.get("*", (req, res) => {
+  res.status(404).json({
+    status: "404 Not Found",
+    message: `404 route: ${req.originalUrl} not found on the server`,
+  });
+});
+
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server Runnung on Port:${PORT}`));
